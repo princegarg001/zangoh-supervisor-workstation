@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+.env
+.env.local
+*.log
+backend/server.log
+testing/test-screenshots/
+testing/diagnose-idle.js
+testing/screenshot-tour.js
+.DS_Store
