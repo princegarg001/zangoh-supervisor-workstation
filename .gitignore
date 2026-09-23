@@ -9,3 +9,8 @@ testing/test-screenshots/
 testing/diagnose-idle.js
 testing/screenshot-tour.js
 .DS_Store
+testing/capture-screenshots.js
+testing/diagnose-click.js
+testing/diagnose-idle.js
+testing/make_docx.py
+testing/screenshot-tour.js

@@ -237,6 +237,9 @@ supervisor-workstation/
 │       └── hooks/             useOverviewStream (SSE), useSpeechToText (Web Speech API)
 ├── docker/                   Dockerfiles
 ├── docker-compose.yml
+├── docs/
+│   ├── AI Agent Supervisor Workstation_Main Instructions.docx   the original challenge brief
+│   └── Architecture-and-Overview.docx                            Word-format architecture summary
 └── testing/                  the challenge's own provided test-runner.js
 ```
 
