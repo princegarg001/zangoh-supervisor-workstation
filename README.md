@@ -239,7 +239,8 @@ supervisor-workstation/
 ├── docker-compose.yml
 ├── docs/
 │   ├── AI Agent Supervisor Workstation_Main Instructions.docx   the original challenge brief
-│   └── Architecture-and-Overview.docx                            Word-format architecture summary
+│   ├── Architecture-and-Overview.docx                            Word-format architecture summary
+│   └── Implementation-Instructions.docx                          how it was built, mapped requirement-by-requirement
 └── testing/                  the challenge's own provided test-runner.js
 ```
 

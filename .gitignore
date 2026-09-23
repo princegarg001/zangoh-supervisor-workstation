@@ -14,3 +14,4 @@ testing/diagnose-click.js
 testing/diagnose-idle.js
 testing/make_docx.py
 testing/screenshot-tour.js
+testing/make_impl_docx.py
