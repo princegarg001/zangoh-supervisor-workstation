@@ -120,13 +120,15 @@ async function search(query, knowledgeBases = [], limit = 3) {
 
   if (state.backend === 'qdrant') {
     try {
-      const hits = await state.qdrant.search(COLLECTION, {
-        vector,
+      // @qdrant/js-client-rest >=1.9 replaced the old `.search()` (vector + flat
+      // array result) with `.query()` (query + `{ points }` result shape).
+      const { points } = await state.qdrant.query(COLLECTION, {
+        query: vector,
         limit,
         with_payload: true,
         ...(kbFilter && { filter: { must: [{ key: 'knowledge_base_id', match: { any: kbFilter } }] } }),
       });
-      return hits.filter((h) => h.score > 0).map((h) => formatResult(h.payload.knowledge_base_id, h.payload.section_path, h.payload.text, h.score));
+      return points.filter((h) => h.score > 0).map((h) => formatResult(h.payload.knowledge_base_id, h.payload.section_path, h.payload.text, h.score));
     } catch (err) {
       console.warn(`[knowledge] Qdrant search failed (${err.message}); falling back to memory`);
     }
